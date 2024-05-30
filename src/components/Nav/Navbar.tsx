@@ -38,8 +38,8 @@ export default function Nav() {
             </div>
             <div className='flex item-end'>
                 <p className='text-white text-bold '>
-                    <Link href='/' className='mx-5 text-white'>Need Help</Link>
-                    <Link href='/' className='mx-5 text-white'>Contact Us</Link>
+                    <Link href='/faq' className='mx-5 text-white'>Need Help</Link>
+                    <Link href='/contact' className='mx-5 text-white'>Contact Us</Link>
                 </p>
             </div>
         </div>
@@ -52,7 +52,7 @@ export default function Nav() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <h1 className="text-4xl font-bold text-black">skilled<span className="text-blue-900">Up </span></h1>
+          <h1 className="text-4xl font-bold text-black"> <a href="/">skilled<span className="text-blue-900">Up </span></a></h1>
         </NavbarBrand>
       </NavbarContent>
 
@@ -129,14 +129,14 @@ export default function Nav() {
         </Dropdown>
 
 
-        <NavbarItem className="text-black hover:bg-blue-200 hover:text-black font-bold rounded-lg px-3 py-2">
+        {/* <NavbarItem className="text-black hover:bg-blue-200 hover:text-black font-bold rounded-lg px-3 py-2">
           <Link color="success" href="/">
             Home
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
         <NavbarItem isActive className="text-black hover:bg-blue-200 hover:text-black font-bold rounded-lg px-3 py-2">
-          <Link href="/courses" aria-current="page">
-           Internship
+          <Link href="/masterclass" aria-current="page">
+           Master Class
           </Link>
         </NavbarItem>
         <NavbarItem className="text-black hover:bg-blue-200 hover:text-black font-bold rounded-lg px-3 py-2">
@@ -230,7 +230,7 @@ export default function Nav() {
       <NavbarContent justify="end">
         
         <NavbarItem>
-          <Button as={Link} color="primary" href="/auth" variant="solid" className="bg-blue-900 border text-white font-bold rounded-lg py-2 px-3">
+          <Button as={Link} color="primary" href="/sign-in" variant="solid" className="bg-blue-900 border text-white font-bold rounded-lg py-2 px-3">
             Sign Up/Login
           </Button>
         </NavbarItem>
@@ -244,7 +244,7 @@ export default function Nav() {
               }
               className="w-full"
               href="#"
-              size="lg"
+              size="sm"
             >
               {item}
             </Link>

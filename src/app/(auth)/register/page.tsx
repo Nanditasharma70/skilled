@@ -28,6 +28,7 @@ import { FormError } from '@/components/form-error'
 import { FormSuccess } from '@/components/form-success'
 import { Input } from '@/components/ui/input'
 import { Loader2 } from 'lucide-react';
+import Footer from '@/components/Footer';
 
 
 
@@ -144,13 +145,15 @@ export default function Register() {
   }
 
   return (
-    <div className='h-full flex items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800  '>
+    <div>
+    <div className='h-full pt-40 pb-20  flex items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800  '>
     
     <CardWrapper 
         headerLabel="Create an Account"
         backButtonLabel="Already have an account?"
         backButtonHref="/sign-in"
         showSocial={true}
+      
        >
             <Form {...form}>
                 <form 
@@ -168,7 +171,7 @@ export default function Register() {
                                         <Input 
                                             disabled={isSubmitting}
                                             {...field}
-                                            placeholder="Abhinandan"
+                                            placeholder="Enter UserName"
                                             type="username"
                                             onChange={(e) => {
                                               field.onChange(e)
@@ -196,7 +199,7 @@ export default function Register() {
                                         <Input 
                                             disabled={isSubmitting}
                                             {...field}
-                                            placeholder="abhi@email.com"
+                                            placeholder="example@email.com"
                                             type="email"
                                         />
                                     </FormControl>
@@ -242,6 +245,8 @@ export default function Register() {
                 </form>
             </Form>
        </CardWrapper>
+       </div>
+       <Footer/>
     
     </div>
   )

@@ -15,6 +15,8 @@ export async function GET(request: Request){
     
     const courses = await CourseModel.find({}).exec();
 
+    console.log(courses);
+
     if(!courses || courses.length === 0){
 
         console.log("No courses found")

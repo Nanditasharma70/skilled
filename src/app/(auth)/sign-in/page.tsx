@@ -30,6 +30,7 @@ import { Loader2 } from 'lucide-react';
 import { signInSchema } from '@/schemas/signInSchema';
 import { signIn } from 'next-auth/react';
 import { clear } from 'console';
+import Footer from '@/components/Footer';
 
 
 
@@ -110,18 +111,21 @@ function SignIn() {
   }
 
   return (
-    <div className='h-full flex items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800  '>
+    <div>
+
+    <div className='h-full flex items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800 pt-32 pb-10 '>
     
     <CardWrapper 
+    
         headerLabel="Sign In"
         backButtonLabel="Don't have an account?"
         backButtonHref="/register"
         showSocial={true}
        >
-            <Form {...form}>
+            <Form {...form} >
                 <form 
                     onSubmit={form.handleSubmit(onSubmit)}
-                    className="space-y-6"
+                    className="space-y-6  "
                 >
                     <div className="space-y-4">
                         <FormField
@@ -134,7 +138,7 @@ function SignIn() {
                                         <Input 
                                             disabled={isSubmitting}
                                             {...field}
-                                            placeholder="abhi@email.com"
+                                            placeholder="example@email.com"
                                             type="email"
                                             onChange={(e) => {
                                               field.onChange(e)
@@ -184,7 +188,8 @@ function SignIn() {
                 </form>
             </Form>
        </CardWrapper>
-    
+    </div>
+    <Footer/>
     </div>
   )
 }

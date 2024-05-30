@@ -15,9 +15,9 @@ export const Header = ({
     label
 }: HeaderProps) => {
     return(
-        <div className="w-full flex flex-col gap-y-4 items-center justify-center">
+        <div className="w-full flex flex-col gap-y-4 items-center justify-center" >
             <h1 className={cn(
-                "text-3xl font-semibold text-blue-700 drop-shadow-md",
+                "text-3xl font-semibold text-blue-700 drop-shadow-md mt-5",
                 font.className
             )}>
                skilledUp

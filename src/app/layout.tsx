@@ -33,6 +33,7 @@ export default function RootLayout({
               <Nav/>
             
               {children}
+              {/* <Footer/> */}
             
             {/* </Providers> */}
 

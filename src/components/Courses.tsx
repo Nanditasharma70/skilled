@@ -85,6 +85,9 @@ function Courses() {
   return (
     <div>
       <h1>Courses Check</h1>
+      <Button>
+        
+      </Button>
       <Button onClick={fetchCourses}>
       {
         loading ? (

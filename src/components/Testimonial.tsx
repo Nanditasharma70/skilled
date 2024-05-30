@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaLinkedin} from 'react-icons/fa';
 import { FaQuoteLeft } from 'react-icons/fa';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 
 export const Testimonial = () => {
@@ -12,7 +14,13 @@ export const Testimonial = () => {
 
         <div>
 
+
             <section className="text-gray-600 body-font">
+            <div className="flex flex-col justify-center items-center p-5">
+      <span className='text-md font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-800'>OUR TESTIOMONIALS</span>
+    <h1 className="text-4xl font-bold bg-clip-text bg-black text-transparent ">Voices Of Success: 
+ <span className='bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent'>Our Community's Testimonials </span></h1>
+  </div>
                 <div className="container px-10 py-10 mx-auto">
                     <div className="flex flex-wrap -m-4">
                     <div className="lg:w-1/3 lg:mb-0 p-5 h-full text-start ">
@@ -34,7 +42,7 @@ export const Testimonial = () => {
                                 <img
                                     alt="testimonial"
                                     className="w-20 h-20  object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                                    src="https://dummyimage.com/305x305"
+                                    src="https://skilledup.s3.ap-south-1.amazonaws.com/images/review_profiles/vaibhav-rawat.jpg"
                                 />
                                 <div className='text-start'>
                                     <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
@@ -64,7 +72,7 @@ export const Testimonial = () => {
                                 <img
                                     alt="testimonial"
                                     className="w-20 h-20  object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                                    src="https://dummyimage.com/305x305"
+                                    src="https://skilledup.s3.ap-south-1.amazonaws.com/images/review_profiles/puneet-mishra.jpg"
                                 />
                                 <div className='text-start'>
                                     <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
@@ -94,7 +102,7 @@ export const Testimonial = () => {
                                 <img
                                     alt="testimonial"
                                     className="w-20 h-20  object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                                    src="https://dummyimage.com/305x305"
+                                    src="https://skilledup.s3.ap-south-1.amazonaws.com/images/review_profiles/sharukh-ali.jpg"
                                 />
                                 <div className='text-start'>
                                     <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">

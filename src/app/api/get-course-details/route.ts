@@ -1,12 +1,17 @@
 import dbConnect from "@/lib/dbConnect";
 import { Course } from "@/model/Course";
 import CourseModel from "@/model/Course";
+import { NextResponse } from "next/server";
 
-export async function GET(request: Request){
+export async function GET(request: Request, response : NextResponse){
+
+    console.group(response);
 
     const { searchParams } = new URL(request.url);
 
-    const id = searchParams.get("id");
+    console.log(searchParams);
+
+    const id = searchParams.get('id');
 
     console.log("Course id: ", id)
 

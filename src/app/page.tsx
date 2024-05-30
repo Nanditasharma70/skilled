@@ -142,14 +142,16 @@ function Home() {
     <div className='w-full p-1 sticky top-[30px] ' style={{ position: windowWidth > 1024 ? 'sticky' : 'static', top: 0, zIndex: 10 }} id='timebar'>
       <div className="flex gap-1  justify-between">
         {
-          ['All','Live', 'Upcming', 'Bootcamp'].map(time => (
+          [' ','All','Live', 'Upcming', 'Bootcamp',' ',' '].map(time => (
+          
             <Button 
             variant="default"
             key={time}
             className={`py-2 px-4 rounded-lg w-full  ${
               selectedTime === time
-                ? 'bg-blue-900 text-white hover:bg-blue-900'
-                : 'text-gray-600 hover:bg-blue-900 hover:text-white bg-gray-300'
+                ? 'bg-white text-black  hover:bg-white  text-xl '
+                : 'text-black bg-white  hover:bg-white  text-xl '
+            
             }`}
             onClick={() => {
               console.log("time: ", time)
@@ -158,10 +160,15 @@ function Home() {
             }}
             >
               {time}
+             
             </Button>
+            
           )) 
         }
       </div>
+      <div className='h-1 w-full bg-black'>
+              
+              </div>
     </div>
 
     <div className='lg:flex  bg-blue-100 p-1'>
@@ -174,8 +181,8 @@ function Home() {
             key={category}
             className={`py-2 px-4 rounded-lg w-full  ${
               selectedCategory === category
-                ? 'bg-blue-900 text-white hover:bg-blue-900'
-                : 'text-gray-600 hover:bg-blue-900 hover:text-white bg-gray-300'
+                ? 'bg-white text-black  hover:bg-white border '
+                : 'text-black bg-white  hover:bg-white border '
             }`}
             onClick={() => {
               console.log("category: ", category)
@@ -201,7 +208,7 @@ function Home() {
             </div>
           ) : filteredByTimeCourses.length > 0 ? (
             filteredByTimeCourses.map(course => (
-              <Card key={course.id} className='rounded-2xl bg-white lg:max-w-sm w-fit mt-3' >
+              <Card key={course._id} className='rounded-2xl bg-white lg:max-w-sm w-fit mt-3' >
                 <CardHeader className='w-full p-0 rounded-2xl' >
                   <Image
                     src={course.imageUrl}
@@ -253,7 +260,7 @@ function Home() {
                 <div className='flex flex-row justify-between items-center'>
                     <Button className=' text-orange-600 hover:bg-white px-12 py-2 bg-white border-orange-600 border-solid  border-2 rounded-md font-lg font-bold'
                     onClick={() => {
-                      router.push(`/courses?id=${course.id}`)
+                      router.push(`/courses/ds?id=${course._id}`)
                       toast({
                         title: "Course " + course.name,
                         description: "Navigating to course page",
@@ -291,11 +298,10 @@ function Home() {
 
     {/* <Partners/> */}
     <Support/>
-    <Mentor/>
+    {/* <Mentor/> */}
     
     <Achiever/>
     <Testimonial/>
-
     <Footer/>
 
    </main>

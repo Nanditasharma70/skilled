@@ -67,7 +67,7 @@ const Footer = () => {
             <p className='m-5 text-lg text-violet-300 hover:text-white transition transform hover:-translate-x-1'><FontAwesomeIcon className='text-orange-500 gap-2' icon={faLocationDot} /> {' '} Office No - 111 & 112, NB Plaza, Greater Noida West, Uttar Pradesh, India - 201306</p>
             <p className='m-5 text-lg text-violet-300 hover:text-white transition transform hover:-translate-x-1'> <FontAwesomeIcon className='text-orange-500 gap-2' icon={faPhone}/> {' '} 0120 6053422</p>
           <div className='m-5 text-lg text-violet-300 hover:text-white transition transform hover:-translate-x-1'>
-            <Link href="/" ><FontAwesomeIcon className='text-orange-500 gap-2' icon={faGlobe} /> {' '} www.skilledUp.com</Link>
+            <Link href="/"><FontAwesomeIcon className='text-orange-500 gap-2 ' icon={faGlobe} /> {' '} www.skilledUp.com</Link>
             <br />
             <Link href="/"><FontAwesomeIcon className='text-orange-500 gap-2' icon={faMessage} /> {' '} info@skilledup.tech</Link>
           </div>

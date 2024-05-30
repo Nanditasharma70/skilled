@@ -8,9 +8,17 @@ import bannershape from '../assets/banner-1-shape-1.png'
 import ctaimg from '../assets/cta-1.png'
 import ctaicon from '../assets/cta-icon.png'
 import supportbg from '../assets/support-bg-1.png'
+import { useState } from 'react';
+import Popup from '../components/Popup';
 
-function Support() {
-  return (
+
+function Support () {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+  return  (
     <div>
         <div className='relative bg-blue-900 w-full py-52 my-5 lg:grid flex items-center justify-center  '>
             <Image
@@ -42,9 +50,12 @@ function Support() {
             <div className='absolute top-36 bottom-0 left-32'>
             <h1 className='text-white text-3xl font-extrabold m-1'>Talk To Our Counseller</h1>
             <p className='text-white text-sm font-bold m-2'>Get Expert Advice our Counsellor will connect to you within 24 hours.</p>
-            <Button href=''
+            <Button  
             className='bg-orange-500  text-lg font-bold py-4 text-white rounded-lg m-1 px-4'
+           
+            onClick={togglePopup}
             >Get Connected Now</Button>
+              <Popup isOpen={isPopupOpen} onClose={togglePopup} />
 
             </div>
             <Image  className=' absolute right-24  top-8 bottom-0 bg-orange-500 rounded-full p-5  hidden md:block'

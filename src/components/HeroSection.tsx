@@ -14,7 +14,8 @@ import bannercap from '../assets/banner-cap.png'
 import bannermap from '../assets/banner-map.png'
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
+// import { faCheck, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faCheck} from '@fortawesome/free-solid-svg-icons';
 
 
 function HeroSection() {
@@ -39,16 +40,21 @@ function HeroSection() {
                 <option>App Developer</option>
               </select>
               <select className='border-2 border-blue-600 p-2 rounded-lg text-blue-600'>
-                <option>Select Qualification</option>
-                <option>Working Professional</option>
-                <option>Post-Graduate</option>
-                <option>Graduate</option>
-                <option>Undergraduate</option>
-                <option>Senior Secondary or Below</option>
+                <option>Select Type</option>
+                <option>BootCamp </option>
+                <option>Live</option>
+                <option>Community</option>
+                <option>Upcoming</option>
+
               </select>
-              <Button className='bg-gradient-to-r from-blue-500 via-blue-600 to-red-600 w-full'>
+              <Button className='bg-gradient-to-r from-orange-300 via-orange-500  to-orange-600 w-full text-lg font-bold'>
                 Get Started
               </Button>
+              <div className='flex -m-3'>
+              <FontAwesomeIcon className='text-green-400 ms-4 ' icon={faCheck} /> {' '}<p className=' text-sm px-1 font-600  '>Free trail</p>
+              <FontAwesomeIcon className='text-green-400 ms-4' icon={faCheck} /> {' '}<p className=' text-sm px-1 font-600  '>flexible pay mode</p>
+              <FontAwesomeIcon className='text-green-400 ms-4' icon={faCheck} /> {' '}<p className=' text-sm px-1 font-600  '>cancel anytime</p>
+              </div>
             </div>
           </div>
 

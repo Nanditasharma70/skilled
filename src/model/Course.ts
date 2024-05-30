@@ -5,6 +5,7 @@ import { CourseOffer, CourseOfferSchema } from "./CourseParts";
 import { CourseAboutSchema, CourseAbout } from "./CourseAbout";
 
 export interface Course {
+    _id: any;
     name: string;
     description: string;
     about?: CourseAbout;
@@ -17,7 +18,7 @@ export interface Course {
     videoUrl?: string;
     syllabusLink: string;
     videos?: Video[];
-    categories: string[];
+    categories?: string[];
     courseOfferings?: CourseOffer[];
     tag?: string;
     syllabus?: string[];
