@@ -191,7 +191,7 @@ export default function ProfileForm() {
                             <Input 
                                 disabled={isSubmitting}
                                 {...field}
-                                placeholder="abhi@email.com"
+                                placeholder="example@email.com"
                                 type="text"
                             />
                         </FormControl>
